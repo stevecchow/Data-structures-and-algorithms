@@ -4,7 +4,21 @@ description: 内容来自 @steve'cho'w
 
 # 1 数组
 
-## Getting Super Powers
+## 简单方法
+
+| 方法名 | 作用 | 格式 | 案例 |
+| :--- | :--- | :--- | :--- |
+| push | 在数组末尾添加元素 | arr.push\(element1, ..., elementN\) | \[1,2,3\].push\(4\) |
+| pop |  |  |  |
+| unshift |  |  |  |
+
+## 重要方法
+
+### splice
+
+作用：
+
+对数组的特定位置进行 增、删、改 等操作
 
 Becoming a super hero is a fairly straight forward process:
 
