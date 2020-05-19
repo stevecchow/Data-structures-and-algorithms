@@ -18,32 +18,66 @@
 
 ### splice
 
-作用：
+**作用：**
 
 对数组的特定位置进行 增、删、改 等操作
 
-格式：
+**格式：**
 
-
-
-Becoming a super hero is a fairly straight forward process:
-
-```
-$ give me super-powers
+```javascript
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 ```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+**参数：**
 
-Once you're strong enough, save the world:
+* start：指定要操作的元素位置
+* deleteCount：要删除的元素个数（可选，不选为删除自start开始后面的所有）
+* item1,item2,...：待插入的元素（可选，不选代表不插入）
 
-{% code title="hello.sh" %}
+**返回值：**
+
+被删除的元素所构成的数组
+
+**案例：**
+
+```javascript
+let arr = [1,2,3,4,5]
+arr.splice(2,2,100,101,102) // 返回 [3, 4]
+console.log(arr)	// [ 1, 2, 100, 101, 102, 5 ]
+```
+
+### every
+
+**作用：**
+
+判断数组中的所有元素，是否全部符合某一标准
+
+**格式：**
+
+```javascript
+arr.every(callback[, thisArg])
+```
+
+**参数：**
+
+* callback：用来测试每个元素的函数，它可以接受三个参数
+  * element：用于测试的当前值
+  * index：当前值的索引（可选）
+  * array：当前数组（可选）
+
+**返回值：**
+
+如果回调函数的每一次返回都为真值，返回 true ，否则返回 false。
+
+**案例：**
+
 ```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+let arr = [1,2,3,4,5]
+// 结果：return false，因为 arr 中的元素不都大于 3
+arr.every(x => {
+  return x>3
+})
 ```
-{% endcode %}
 
 
 
